@@ -14,7 +14,6 @@
 <script>
 import ComboBox from './components/ComboBox'
 import cityData from './models/cities'
-import { log } from 'util';
 
 const STRING_CITY ="city";
 const STRING_AREA ="area";
@@ -24,7 +23,7 @@ let getCities = function(){
 }
 
 let getAreas = function(){
-  return cityData.getAreas(this.selectCityIndex);
+  return cityData.getAreas( this.comboBoxItems[0].selectIndex);
 }
 
 let getZipCode = function(){   
