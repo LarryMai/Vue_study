@@ -61,9 +61,7 @@ export default {
         {
           default:break;
           case STRING_CITY:
-            this.selectCityIndex = value;
-            this.comboBoxItems[0].selectIndex = value;
-          
+            this.comboBoxItems[0].selectIndex = value;          
             this.comboBoxItems[1].itemSource =
                 cityData.getAreas( value);
             this.comboBoxItems[1].selectIndex = 0;
