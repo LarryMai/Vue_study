@@ -36,12 +36,12 @@ var cities =  [
 ];
 
 export default {
-      cities ,
+      
       getCities: ()=>{
         return cities.map(city=>city.name);
       },
       getAreas: function(selectCityIndex){
-        let city = this.cities[selectCityIndex];
+        let city = cities[selectCityIndex];
 
         if (!city) 
            return [];
@@ -50,7 +50,7 @@ export default {
       },
       getZipCode: function(selectCityIndex,selectAreaIndex)
       {
-        let city = this.cities[selectCityIndex];
+        let city = cities[selectCityIndex];
         if (!city)
           return "";
         let area = city.areas[selectAreaIndex];
