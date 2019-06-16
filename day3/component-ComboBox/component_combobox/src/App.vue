@@ -12,8 +12,6 @@
 </template>
 
 <script>
-
-
 import ComboBox from './components/ComboBox'
 import cityData from './models/cities'
 import { log } from 'util';
@@ -22,17 +20,14 @@ const STRING_CITY ="city";
 const STRING_AREA ="area";
 
 let getCities = function(){
-  console.log("enter getCities");
   return cityData.getCities();
 }
 
-let getAreas = function()
-{
+let getAreas = function(){
   return cityData.getAreas(this.selectCityIndex);
 }
 
-let getZipCode = function()
-{   
+let getZipCode = function(){   
   return cityData.getZipCode(
     this.comboBoxItems[0].selectIndex
     ,this.comboBoxItems[1].selectIndex);
@@ -84,9 +79,9 @@ export default {
                 cityData.getAreas( value);
             this.comboBoxItems[1].selectIndex = 0;
             break;
+
           case STRING_AREA:
             this.comboBoxItems[1].selectIndex = value;
-            
             break;
         }
     },
