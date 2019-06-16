@@ -1,6 +1,6 @@
 <template>
 <div>
-    <select @change="onSelectChanged">
+    <select @change="onSelectionChanged">
       <option v-for="(item,index) in itemSource" 
               :key="item" 
               :value="index" 
@@ -15,7 +15,7 @@
 
 <script>
 
-let onSelectChanged= function(eventArgs){
+let onSelectionChanged= function(eventArgs){
   this.$emit("input", this.category, eventArgs.target.value);
 }
 
@@ -23,7 +23,7 @@ export default {
   name: "ComboBox",
   props : ["category", "itemSource"],
   methods : {
-    onSelectChanged
+    onSelectionChanged
   }
 }
 
