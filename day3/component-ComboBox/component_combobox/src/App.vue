@@ -18,14 +18,6 @@ import cityData from './models/cities'
 const STRING_CITY ="city";
 const STRING_AREA ="area";
 
-let getCities = function(){
-  return cityData.getCities();
-}
-
-let getAreas = function(){
-  return cityData.getAreas( this.comboBoxItems[0].selectIndex);
-}
-
 let getZipCode = function(){   
   return cityData.getZipCode(
     this.comboBoxItems[0].selectIndex
@@ -60,9 +52,7 @@ export default {
     }
   },
   computed:{
-    getCities,
-    getAreas,
-    getZipCode,
+        getZipCode,
   },
   methods:{
     onComboBoxSelected : function(category, value)
